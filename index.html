@@ -1,0 +1,658 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+        integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/main.css">
+    <title>Rent House</title>
+</head>
+
+<body>
+    <header class="header">
+        <div class="container">
+            <div class="row">
+                <div class="col-2">
+                    <div class="header__logo">
+                        <h4>LOGO</h4>
+                    </div>
+                    <!-- /.header__logo -->
+                </div>
+                <!-- /.col- -->
+                <div class="col-6">
+                    <div class="header__menu">
+                        <ul>
+                            <li><a href="#">Seel House</a></li>
+                            <li><a href="#">Rent House</a></li>
+                            <li><a href="#">Online Experiences</a></li>
+                        </ul>
+                    </div>
+                    <!-- /.header__menu -->
+                </div>
+                <!-- /.col- -->
+                <div class="col-4">
+                    <div class="header__button">
+                        <!-- Button trigger modal -->
+                        <button type="button" class="btn btn-primary" data-bs-toggle="modal"
+                            data-bs-target="#exampleModal"
+                            style="background-color: #A5D1E1; border-color: #A5D1E1; color: #1B213A;">
+                            Sign In
+                        </button>
+
+                        <!-- Modal -->
+                        <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel"
+                            aria-hidden="true">
+                            <div class="modal-dialog">
+                                <div class="modal-content" style="background-color: #A5D1E1;">
+                                    <div class="modal-header">
+                                        <h1 class="modal-title fs-5" id="exampleModalLabel">Sign In</h1>
+                                        <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                            aria-label="Close"></button>
+                                    </div>
+                                    <div class="modal-body">
+                                        <form>
+                                            <div class="mb-3">
+                                                <label for="exampleInputEmail1" class="form-label">Email address</label>
+                                                <input type="email" class="form-control" id="exampleInputEmail1"
+                                                    aria-describedby="emailHelp" required style="background-color: transparent; border-color: #1B213A;">
+                                                <div id="emailHelp" class="form-text">We'll never share your email with
+                                                    anyone else.</div>
+                                            </div>
+                                            <div class="mb-3">
+                                                <label for="exampleInputPassword1" class="form-label">Password</label>
+                                                <input type="password" class="form-control" id="exampleInputPassword1" required style="background-color: transparent; border-color: #1B213A;">
+                                            </div>
+                                            <div class="mb-3 form-check">
+                                                <input type="checkbox" class="form-check-input" id="exampleCheck1" style="background-color: transparent; border-color: #1B213A;">
+                                                <label class="form-check-label" for="exampleCheck1">Check me out</label>
+                                            </div>
+                                            <button type="submit" class="btn btn-primary">Submit</button>
+                                        </form>
+                                    </div>
+                                    <div class="modal-footer">
+                                        <button type="button" class="btn btn-secondary"
+                                            data-bs-dismiss="modal">Close</button>
+                                        <button type="button" class="btn btn-primary">Save</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <button type="button" class="btn btn-primary" data-bs-toggle="modal"
+                            data-bs-target="#staticBackdrop" style="background-color: #1B213A; border-color: #1B213A;">
+                            Register
+                        </button>
+                        <!-- Modal -->
+                        <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false"
+                            tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+                            <div class="modal-dialog">
+                                <div class="modal-content" style="background-color: #A5D1E1;">
+                                    <div class="modal-header">
+                                        <h1 class="modal-title fs-5" id="staticBackdropLabel">Register</h1>
+                                        <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                            aria-label="Close"></button>
+                                    </div>
+                                    <div class="modal-body">
+                                        <div class="input-group mb-3">
+                                            <span class="input-group-text" id="basic-addon1" style="background-color: transparent; border-color: #1B213A;">@</span>
+                                            <input type="text" class="form-control" placeholder="Username"
+                                                aria-label="Username" aria-describedby="basic-addon1" style="background-color: transparent; border-color: #1B213A;">
+                                        </div>
+
+                                        <div class="input-group mb-3">
+                                            <input type="text" class="form-control" placeholder="Recipient's username"
+                                                aria-label="Recipient's username" aria-describedby="basic-addon2" style="background-color: transparent; border-color: #1B213A;">
+                                            <span class="input-group-text" id="basic-addon2" style="background-color: transparent; border-color: #1B213A;">@example.com</span>
+                                        </div>
+
+                                        <div class="mb-3">
+                                            <label for="basic-url" class="form-label">Your vanity URL</label>
+                                            <div class="input-group">
+                                                <span class="input-group-text"style="background-color: transparent; border-color: #1B213A;" id="basic-addon3">https://example.com/users/</span>
+                                                <input type="text" class="form-control" id="basic-url"
+                                                    aria-describedby="basic-addon3 basic-addon4" style="background-color: transparent; border-color: #1B213A;">
+                                            </div>
+                                            <div class="form-text" id="basic-addon4">Example help text goes outside the
+                                                input group.</div>
+                                        </div>
+
+                                        <div class="input-group mb-3">
+                                            <span class="input-group-text" style="background-color: transparent; border-color: #1B213A;">$</span>
+                                            <input type="text" class="form-control"
+                                                aria-label="Amount (to the nearest dollar)" style="background-color: transparent; border-color: #1B213A;">
+                                            <span class="input-group-text" style="background-color: transparent; border-color: #1B213A;">.00</span>
+                                        </div>
+
+                                        <div class="input-group mb-3">
+                                            <input type="text" class="form-control" placeholder="Username"
+                                                aria-label="Username" style="background-color: transparent; border-color: #1B213A;">
+                                            <span class="input-group-text" style="background-color: transparent; border-color: #1B213A;">@</span>
+                                            <input type="text" class="form-control" placeholder="Server"
+                                                aria-label="Server" style="background-color: transparent; border-color: #1B213A;">
+                                        </div>
+
+                                        <div class="input-group">
+                                            <span class="input-group-text" style="background-color: transparent; border-color: #1B213A;">With textarea</span>
+                                            <textarea class="form-control" aria-label="With textarea" style="background-color: transparent; border-color: #1B213A;"></textarea>
+                                            <!-- <input type="submit" value="Save" style="background-color: transparent; border-color: #1B213A;"> -->
+                                        </div>
+                                    </div>
+                                    <div class="modal-footer">
+                                        <button type="button" class="btn btn-secondary"
+                                            data-bs-dismiss="modal">Close</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- /.header__button -->
+                    </div>
+                    <!-- /.col- -->
+                </div>
+                <!-- /.row -->
+            </div>
+            <!-- /.container -->
+    </header>
+    <!-- /.header -->
+    <section class="home">
+        <div class="container">
+            <div class="row">
+                <div class="col-6" data-aos="fade-right">
+                    <div class="home__subtitle">
+                        <h2>We help people to getting home & renting with good price</h2>
+                    </div>
+                    <!-- /.home__subtitle -->
+                    <div class="home__desc">
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Id risus vulputate tortor, risus ut.
+                            Viverra viverra aliquam, semper duis a aliquam. Elit porttitor arcu nisl, faucibus.</p>
+                    </div>
+                    <!-- /.home__desc -->
+                    <div class="home__location">
+                        <form action="#">
+                            <form action="#">
+                                <input type="submit" id="submit" value="Search">
+                                <input type="text" id="location" placeholder="Search locations..">
+                            </form>
+                        </form>
+                    </div>
+                    <!-- /.home__location -->
+                    <div class="home__clients">
+                        <div class="row">
+                            <div class="col-3">
+                                <div class="home__results">
+                                    <h4>12k<a href="#">+</a></h4>
+                                    <p>Happy Customers</p>
+                                </div>
+                                <!-- /.home__results -->
+                            </div>
+                            <!-- /.col -->
+                            <div class="col-3">
+                                <div class="home__results">
+                                    <h4>14k<a href="#">+</a></h4>
+                                    <p>Awards Winning</p>
+                                </div>
+                                <!-- /.home__results -->
+                            </div>
+                            <!-- /.col -->
+                            <div class="col-3">
+                                <div class="home__results">
+                                    <h4>5k<a href="#">+</a></h4>
+                                    <p>Premium Product</p>
+                                </div>
+                                <!-- /.home__results -->
+                            </div>
+                            <!-- /.col -->
+                        </div>
+                        <!-- /.row -->
+                    </div>
+                    <!-- /.home__clients -->
+                </div>
+                <!-- /.col-6 -->
+                <div class="col-6" data-aos="fade-left">
+                    <div class="home__image">
+                        <img src="/image/img.png" alt="">
+                    </div>
+                    <!-- /.home__image -->
+                </div>
+                <!-- /.col-6 -->
+            </div>
+            <!-- /.row -->
+        </div>
+        <!-- /.container -->
+    </section>
+    <!-- /.home -->
+    <section class="help">
+        <div class="container">
+            <div class="help__title">
+                <h3>See how Trulia can help</h3>
+            </div>
+            <!-- /.help__title -->
+            <div class="row">
+                <div class="col-4" data-aos="fade-right">
+                    <div class="help__info">
+                        <div class="help__icon">
+                            <img src="/image/house.png" alt="">
+                        </div>
+                        <!-- /.help__icon -->
+                        <div class="help__content">
+                            <h4>Rent a home</h4>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Id risus vulputate tortor, risus
+                                ut. Viverra viverra aliquam, semper duis a aliquam.</p>
+                        </div>
+                        <!-- /.help__content -->
+                        <div class="help__button">
+                            <button class="btn btn-register">Find a rental</button>
+                        </div>
+                        <!-- /.help__button -->
+                    </div>
+                    <!-- /.help__info -->
+                </div>
+                <!-- /.col-4 -->
+                <div class="col-4" data-aos="zoom-in">
+                    <div class="help__info">
+                        <div class="help__icon">
+                            <img src="/image/flag.png" alt="">
+                        </div>
+                        <!-- /.help__icon -->
+                        <div class="help__content">
+                            <h4>See neighborhoods</h4>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Id risus vulputate tortor, risus
+                                ut. Viverra viverra aliquam, semper duis a aliquam.</p>
+                        </div>
+                        <!-- /.help__content -->
+                        <div class="help__button">
+                            <button class="btn btn-register">Learn more</button>
+                        </div>
+                        <!-- /.help__button -->
+                    </div>
+                    <!-- /.help__info -->
+                </div>
+                <!-- /.col-4 -->
+                <div class="col-4" data-aos="fade-left">
+                    <div class="help__info">
+                        <div class="help__icon">
+                            <img src="/image/home.png" alt="">
+                        </div>
+                        <!-- /.help__icon -->
+                        <div class="help__content">
+                            <h4>Buy a home</h4>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Id risus vulputate tortor, risus
+                                ut. Viverra viverra aliquam, semper duis a aliquam.</p>
+                        </div>
+                        <!-- /.help__content -->
+                        <div class="help__button">
+                            <button class="btn btn-register">Find a home</button>
+                        </div>
+                        <!-- /.help__button -->
+                    </div>
+                    <!-- /.help__info -->
+                </div>
+                <!-- /.col-4 -->
+            </div>
+            <!-- /.row -->
+        </div>
+        <!-- /.container -->
+    </section>
+    <!-- /.help -->
+    <section class="agent" data-aos="zoom-in-up">
+        <div class="container">
+            <div class="row">
+                <div class="col-6">
+                    <div class="agent__image">
+                        <img src="/image/img.png" alt="">
+                    </div>
+                    <!-- /.agent__image -->
+                </div>
+                <!-- /.col-6 -->
+                <div class="col-6">
+                    <div class="agent__info">
+                        <div class="agent__title">
+                            <h3>Seamlessly connecting agents buyers, and sellers</h3>
+                        </div>
+                        <!-- /.agetn__title -->
+                        <div class="agent__desc">
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer dolor at consectetur
+                                etiam non amet suscipit dignissim sed. Varius pretium donec dignissim tincidunt sociis.
+                                Tellus duis egestas est in venenatis, tincidunt dolor ut eu. Cursus tincidunt urna, quis
+                                duis sed massa ornare. Ultricies at quis ante aliquet fringilla.</p>
+                        </div>
+                        <!-- /.agent__desc -->
+                        <div class="agent__button">
+                            <button class="btn btn-register">Explore more</button>
+                        </div>
+                        <!-- /.agent__button -->
+                    </div>
+                    <!-- /.agent__info -->
+                </div>
+                <!-- /.col-6 -->
+            </div>
+            <!-- /.row -->
+        </div>
+        <!-- /.container -->
+    </section>
+    <!-- /.agent -->
+    <section class="popular" data-aos="zoom-in-down">
+        <div class="container">
+            <div class="popular__subtitle">
+                <h3>Explore the popular residences</h3>
+            </div>
+            <!-- /.popular__subtitle -->
+            <div class="popular__desc">
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Id risus vulputate tortor, risus ut Viverra
+                    viverra aliquam, semper duis a aliquam.</p>
+            </div>
+            <!-- /.popular__desc -->
+            <div class="row">
+                <div class="col-sm-4">
+                    <div class="card">
+                        <div class="card__image">
+                            <img src="/image/Group 2339.png" alt="">
+                        </div>
+                        <!-- /.card__image -->
+                        <div class="card__content">
+                            <div class="card__name">
+                                <h6>Meadow view</h6>
+                            </div>
+                            <!-- /.card__name -->
+                            <div class="card__price">
+                                <span>$570.00</span>
+                                <span id="bottom">New</span>
+                            </div>
+                            <!-- /.card__price -->
+                            <div class="card__field">
+                                <span>3 Bads</span>
+                                <span id="left">3 Baths</span>
+                                <span id="right">2,532 Sq.Ft</span>
+                            </div>
+                            <!-- /.card__field -->
+                        </div>
+                        <!-- /.card__content -->
+                    </div>
+                    <!-- /.card -->
+                </div>
+                <!-- /.col-6 -->
+                <div class="col-sm-4">
+                    <div class="card">
+                        <div class="card__image">
+                            <img src="/image/Group 2339.png" alt="">
+                        </div>
+                        <!-- /.card__image -->
+                        <div class="card__content">
+                            <div class="card__name">
+                                <h6>Meadow view</h6>
+                            </div>
+                            <!-- /.card__name -->
+                            <div class="card__price">
+                                <span>$570.00</span>
+                                <span id="bottom">New</span>
+                            </div>
+                            <!-- /.card__price -->
+                            <div class="card__field">
+                                <span>3 Bads</span>
+                                <span id="left">3 Baths</span>
+                                <span id="right">2,532 Sq.Ft</span>
+                            </div>
+                            <!-- /.card__field -->
+                        </div>
+                        <!-- /.card__content -->
+                    </div>
+                    <!-- /.card -->
+                </div>
+                <!-- /.col-6 -->
+                <div class="col-sm-4">
+                    <div class="card">
+                        <div class="card__image">
+                            <img src="/image/Group 2339.png" alt="">
+                        </div>
+                        <!-- /.card__image -->
+                        <div class="card__content">
+                            <div class="card__name">
+                                <h6>Meadow view</h6>
+                            </div>
+                            <!-- /.card__name -->
+                            <div class="card__price">
+                                <span>$570.00</span>
+                                <span id="bottom">New</span>
+                            </div>
+                            <!-- /.card__price -->
+                            <div class="card__field">
+                                <span>3 Bads</span>
+                                <span id="left">3 Baths</span>
+                                <span id="right">2,532 Sq.Ft</span>
+                            </div>
+                            <!-- /.card__field -->
+                        </div>
+                        <!-- /.card__content -->
+                    </div>
+                    <!-- /.card -->
+                </div>
+                <!-- /.col-6 -->
+            </div>
+            <!-- /.row -->
+        </div>
+        <!-- /.container -->
+    </section>
+    <!-- /.popular -->
+    <section class="give">
+        <div class="container">
+            <div class="row">
+                <div class="col-6">
+                    <div class="give__title">
+                        <h3>Value we give to you</h3>
+                    </div>
+                    <!-- /.give__title -->
+                    <div class="give__desc">
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer dolor at consectetur etiam
+                            non amet suscipit dignissim sed. Varius pretium.</p>
+                    </div>
+                    <!-- /.give__desc -->
+                    <div class="give__prices">
+                        <div class="accordion" id="accordionExample">
+                            <div class="accordion-item">
+                                <h2 class="accordion-header" id="headingOne">
+                                    <button class="accordion-button" type="button" data-bs-toggle="collapse"
+                                        data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                                        Best price on the market
+                                    </button>
+                                </h2>
+                                <div id="collapseOne" class="accordion-collapse collapse show"
+                                    aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+                                    <div class="accordion-body">
+                                        <strong>This is the first item's accordion body.</strong> It is shown by
+                                        default, until the collapse plugin adds the appropriate classes that we use to
+                                        style each element. These classes control the overall appearance, as well as the
+                                        showing and hiding via CSS transitions. You can modify any of this with custom
+                                        CSS or overriding our default variables. It's also worth noting that just about
+                                        any HTML can go within the <code>.accordion-body</code>, though the transition
+                                        does limit overflow.
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="accordion-item">
+                                <h2 class="accordion-header" id="headingTwo">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                        data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                                        Prevent unstable prices
+                                    </button>
+                                </h2>
+                                <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo"
+                                    data-bs-parent="#accordionExample">
+                                    <div class="accordion-body">
+                                        <strong>This is the second item's accordion body.</strong> It is hidden by
+                                        default, until the collapse plugin adds the appropriate classes that we use to
+                                        style each element. These classes control the overall appearance, as well as the
+                                        showing and hiding via CSS transitions. You can modify any of this with custom
+                                        CSS or overriding our default variables. It's also worth noting that just about
+                                        any HTML can go within the <code>.accordion-body</code>, though the transition
+                                        does limit overflow.
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="accordion-item">
+                                <h2 class="accordion-header" id="headingThree">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                        data-bs-target="#collapseThree" aria-expanded="false"
+                                        aria-controls="collapseThree">
+                                        Security of your data
+                                    </button>
+                                </h2>
+                                <div id="collapseThree" class="accordion-collapse collapse"
+                                    aria-labelledby="headingThree" data-bs-parent="#accordionExample">
+                                    <div class="accordion-body">
+                                        <strong>This is the third item's accordion body.</strong> It is hidden by
+                                        default, until the collapse plugin adds the appropriate classes that we use to
+                                        style each element. These classes control the overall appearance, as well as the
+                                        showing and hiding via CSS transitions. You can modify any of this with custom
+                                        CSS or overriding our default variables. It's also worth noting that just about
+                                        any HTML can go within the <code>.accordion-body</code>, though the transition
+                                        does limit overflow.
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- /.give__prices -->
+                </div>
+                <!-- /.col-6 -->
+                <div class="col-6">
+                    <div class="give__image">
+                        <img src="/image/Group 2339.png" alt="">
+                    </div>
+                    <!-- /.give__image -->
+                </div>
+                <!-- /.col-6 -->
+            </div>
+            <!-- /.row -->
+        </div>
+        <!-- /.container -->
+    </section>
+    <!-- /.give -->
+    <section class="upg">
+        <div class="container">
+            <div class="upg__content">
+                <div class="upg__title">
+                    <h3>Upgrade your home today?</h3>
+                </div>
+                <!-- /.upg__title -->
+                <div class="upg__desc">
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Id risus vulputate tortor, risus ut
+                        Viverra
+                        viverra aliquam, semper duis a aliquam.</p>
+                </div>
+                <!-- /.upg__desc -->
+                <div class="upg__input">
+                    <form action="#">
+                        <input type="submit" id="submit" value="Continue">
+                        <input type="text" id="location" placeholder="Enter your email...">
+                    </form>
+                </div>
+                <!-- /.upg__input -->
+            </div>
+            <!-- /.upg__content -->
+        </div>
+        <!-- /.container -->
+    </section>
+    <!-- /.upg -->
+    <footer class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-4">
+                    <div class="footer__logo">
+                        <h4>LOGO</h4>
+                    </div>
+                    <!-- /.header__logo -->
+                    <div class="footer__desc">
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Id risus vulputate.</p>
+                    </div>
+                    <!-- /.footer__desc -->
+                </div>
+                <!-- /.col- -->
+                <div class="col-2">
+                    <div class="footer__menu">
+                        <h4>Company</h4>
+                        <li>Crypto widgets</li>
+                        <li>Crypto currency</li>
+                        <li>Bitcoin guid </li>
+                        <li>contact us</li>
+                        <li>service</li>
+                    </div>
+                </div>
+                <!-- /.col- -->
+                <div class="col-2">
+                    <div class="footer__menu">
+                        <h4>Navigate</h4>
+                        <li>Roadmap</li>
+                        <li>video</li>
+                        <li>Team</li>
+                        <li>Coin disttibution</li>
+                        <li>Media</li>
+                    </div>
+                </div>
+                <!-- /.col- -->
+                <div class="col-2">
+                    <div class="footer__menu">
+                        <h4>products</h4>
+                        <li>Hardware</li>
+                        <li>Mining</li>
+                        <li>Terade calls</li>
+                        <li>Software</li>
+                        <li>media</li>
+                    </div>
+                </div>
+                <!-- /.col- -->
+                <div class="col-2">
+                    <div class="footer__menu">
+                        <h4>contact us</h4>
+                        <li>Mailing address</li>
+                        <li>Suite 1100</li>
+                        <li>0197876236</li>
+                        <li>gmail</li>
+                    </div>
+                </div>
+                <!-- /.col- -->
+            </div>
+            <!-- /.row -->
+            <div class="footer__reserved">
+                <div class="row">
+                    <div class="col-6">
+                        <div class="footer__copyright">
+                            <p>Copyright © 2021 Brandoxide. All rights reserved</p>
+                        </div>
+                        <!-- /.footer__copyright -->
+                    </div>
+                    <!-- /.col-6 -->
+                    <div class="col-6">
+                        <div class="footer__help">
+                            <p>Terms & Agreements</p>
+                            <p>Privecy Policy</p>
+                        </div>
+                        <!-- /.footer__help -->
+                    </div>
+                    <!-- /.col-6 -->
+                </div>
+                <!-- /.footer__reserved -->
+            </div>
+            <!-- /.row -->
+        </div>
+        <!-- /.container -->
+    </footer>
+    <!-- /.footer -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+        <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+        <script>
+            AOS.init();
+        </script>
+</body>
+
+</html>
